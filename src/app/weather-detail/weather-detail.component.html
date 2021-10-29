@@ -1,1 +1,74 @@
-<p>weather-detail works!</p>
+<div class="outerContainer">
+    <div class="header">
+        Wheather Details
+    </div>
+
+    <div class="mainOuterContainer">
+        <div *ngIf="!weatherData && !error" id="loading" class="loader spinner">
+        </div>
+        <div *ngIf="error" id="loading" class="loader">
+            <h1>Sorry No data found</h1>
+            <p>
+                Please go back and try for other city
+            </p>
+        </div>
+        <div *ngIf="weatherData" class="dataBox">
+
+            <div class="cityDetails">
+                <div class="city">
+                    <span>City</span>
+                    <div>{{city}}</div>
+
+
+                </div>
+            </div>
+            <div class="tempContainer">
+                <div class="temp">
+                    <span>
+                        Temp
+                    </span>
+                    <div *ngIf="weatherData.main.temp">
+                        Temp : {{weatherData.main.temp}}
+                    </div>
+                    <div *ngIf="weatherData.main.temp_max">
+                        Temp Max : {{weatherData.main.temp_max}}
+                    </div>
+                    <div *ngIf="weatherData.main.temp_min">
+                        Temp Min : {{weatherData.main.temp_min}}
+                    </div>
+                </div>
+            </div>
+            <div class="pressureContainer">
+                <div class="pressure">
+                    <span>
+                        Pressure
+                    </span>
+                    <div *ngIf="weatherData.main.pressure">
+                        Pressure : {{weatherData.main.pressure}}
+                    </div>
+                    <div *ngIf="weatherData.main.humidity">
+                        Hunidity : {{weatherData.main.humidity}}
+                    </div>
+                </div>
+            </div>
+            <div class="windContainer">
+                <div class="wind">
+                    <span>
+                        Wind
+                    </span>
+                    <div *ngIf="weatherData.wind.deg">
+                        Degree : {{weatherData.wind.deg}}
+                    </div>
+                    <div *ngIf="weatherData.wind.speed">
+                        Speed : {{weatherData.wind.speed}}
+                    </div>
+                    <div *ngIf="weatherData.wind.gust">
+                        Gust : {{weatherData.wind.gust}}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>

@@ -1,0 +1,162 @@
+.outerContainer{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    left: 0px;
+    top:0px;
+    display: flex;
+    flex-direction: column;
+    background-color: silver;
+    overflow: auto;
+}
+.header{
+    position: relative;
+    width: 100vw;
+    height: 60px;
+    background-color: #0ab5cc;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-weight: bold;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-width: 300px;
+}
+
+.mainOuterContainer{
+    position: relative;
+    margin-top: 50px;
+    height: calc(100vh - 160px);
+    margin-bottom: 50px;
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+    height: calc(100vh - 140px -60px );
+    background-color: white;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    min-width: 300px;
+    min-height: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+
+
+@keyframes spinner {
+  to {transform: rotate(360deg);}
+}
+ 
+.spinner:before {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 70px;
+  height: 70px;
+  margin-top: -10px;
+  margin-left: -10px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  border-top-color: #000;
+  animation: spinner .6s linear infinite;
+}
+
+.mainOuterContainer::-webkit-scrollbar {
+  width: 7px;
+}
+.mainOuterContainer::-webkit-scrollbar-track {
+  background: #e2e2e2;
+}
+.mainOuterContainer::-webkit-scrollbar-thumb {
+  background: #0ab5cc;
+}
+
+@media only screen and (max-width: 800px) {
+  .mainOuterContainer{
+      width: 100%;
+      margin-left: 0%;
+      margin-right: 0%;
+  }
+  .tableHeader{
+      width: 100%;
+      margin-left: 0%;
+      margin-right: 0%;
+  }
+} 
+.dataBox{
+    width: 100%;
+    height: 100%;
+    min-height: 700px;
+}
+.cityDetails{
+    width: 100%;
+    height: 25%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.tempContainer{
+    width: 100%;
+    height: 25%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-left: 10px;
+    
+   
+    align-items: center;
+}
+.pressureContainer{
+    width: 100%;
+    height: 25%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.dataBox>div>div{
+    border-radius: 10px 10px 10px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 19px;
+}
+.dataBox>div>div>span{
+    font-size: 22px;
+    font-weight: bold;
+}
+.windContainer{
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    
+}
+.city{
+    width: 300px;
+    height: 150px;
+    background-color:#0ab5cc;
+}
+.temp{
+    width: 300px;
+    height: 150px;
+    background-color: silver;
+}
+.pressure{
+    width: 300px;
+    height: 150px;
+    background-color: wheat;
+}
+.wind{
+    width: 300px;
+    height: 150px;
+    background-color: #ccc;
+}

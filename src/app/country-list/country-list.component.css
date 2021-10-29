@@ -21,7 +21,7 @@
     font-size: 25px;
     font-weight: bold;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    min-width: 600px;
+    min-width: 300px;
 }
 .tableHeader{
     position: relative;
@@ -36,7 +36,7 @@
     background-color: #000;
     color: #fff;
     border-radius: 10px 10px 0px 0px;
-    min-width: 600px;
+    min-width: 300px;
 }
 .mainOuterContainer{
     position: relative;
@@ -50,7 +50,7 @@
     overflow: auto;
     border-radius: 0px 0px 10px 10px;
     box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    min-width: 600px;
+    min-width: 300px;
     
 }
 

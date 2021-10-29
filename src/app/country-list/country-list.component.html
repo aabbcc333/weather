@@ -18,7 +18,7 @@
         </div>
         <div *ngIf="countryList">
             <div class="tableBodyContainer">
-                <div *ngFor="let e of countryList;" class="tableData">
+                <div *ngFor="let e of countryList;" class="tableData" (click)="goToDetail(e.capital[0],e.cca2)">
                     <span>{{ e.name.common }}</span>
                     <span>{{ e.capital[0] }}</span>
                     <span>{{ e.cca2 }}</span>
