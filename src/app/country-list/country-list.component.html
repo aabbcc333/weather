@@ -1,1 +1,32 @@
-<p>country-list works!</p>
+<div class="outerContainer">
+    <div class="header">
+        Country List
+    </div>
+    <div class="tableHeader">
+        <span>
+            Country
+        </span>
+        <span>
+            capital
+        </span>
+        <span>
+            code
+        </span>
+    </div>
+    <div class="mainOuterContainer">
+        <div *ngIf="!countryList" id="loading" class="loader spinner">
+        </div>
+        <div *ngIf="countryList">
+            <div class="tableBodyContainer">
+                <div *ngFor="let e of countryList;" class="tableData">
+                    <span>{{ e.name.common }}</span>
+                    <span>{{ e.capital[0] }}</span>
+                    <span>{{ e.cca2 }}</span>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+</div>
