@@ -1,6 +1,11 @@
 # Weather
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.12.
+This is World weather app you can get weather of any city by clicking on the city page
+
+## How to install 
+Run  `git clone https://github.com/aabbcc333/weather.git ` 
+then `npm install`
+then `ng serve`
 
 ## Development server
 
